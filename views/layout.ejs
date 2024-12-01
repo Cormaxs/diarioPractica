@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Infonoa24.com' %></title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar-diary">
+        <div class="navbar-container">
+            <a href="/seccion/secciones" class="logo-diary">Infonoa24.com</a>
+            <ul class="menu-diary">
+                <li><a href="/seccion/finanzas" class="menu-item-diary">Finanzas</a></li>
+                <li><a href="/seccion/politica" class="menu-item-diary">Política</a></li>
+                <li><a href="/seccion/actualidad" class="menu-item-diary">Actualidad</a></li>
+                <li><a href="/seccion/tecnologia" class="menu-item-diary">Tecnología</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <main id="main-content-diary">
+        <div class="content-container-diary">
+            <%- include(content) %>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-diary">
+        <div class="footer-container-diary">
+            <ul class="footer-menu-diary">
+                <li><a href="/seccion/finanzas" class="footer-item-diary">Finanzas</a></li>
+                <li><a href="/seccion/politica" class="footer-item-diary">Política</a></li>
+                <li><a href="/seccion/actualidad" class="footer-item-diary">Actualidad</a></li>
+                <li><a href="/seccion/tecnologia" class="footer-item-diary">Tecnología</a></li>
+            </ul>
+            <p class="footer-text-diary">&copy; 2024 Infonoa24.com - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

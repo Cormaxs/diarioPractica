@@ -1,0 +1,35 @@
+diario-digital/
+│
+├── app/
+│   ├── controllers/          # Controladores: manejo de la lógica de negocio
+│   │   ├── NoticiasController.js
+│   │   ├── UsuariosController.js
+│   │   └── ComentariosController.js
+│   │
+│   ├── models/               # Modelos: representación de datos
+│   │   ├── Noticia.js
+│   │   ├── Usuario.js
+│   │   └── Comentario.js
+│   │
+│   ├── views/                # Vistas: presentación de la interfaz de usuario
+│   │   ├── index.ejs         # Página principal
+│   │   ├── noticia.ejs       # Página de detalle de noticia
+│   │   └── login.ejs         # Página de inicio de sesión
+│   │
+│   └── routes/               # Rutas: mapeo de URLs a controladores
+│       ├── indexRoutes.js    # Rutas de la página principal y noticias
+│       ├── authRoutes.js     # Rutas de autenticación
+│       └── apiRoutes.js      # Rutas de la API para interacciones con datos
+│
+├── public/                   # Archivos estáticos (CSS, JS, imágenes)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── config/                   # Configuración de la aplicación (base de datos, etc.)
+│   ├── db.js                 # Configuración de la base de datos
+│   └── config.js             # Configuración general de la app
+│
+├── node_modules/             # Dependencias de Node.js
+├── package.json              # Archivo de configuración de npm
+└── server.js                 # Archivo principal para arrancar el servidor

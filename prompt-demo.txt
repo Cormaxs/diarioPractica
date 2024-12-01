@@ -1,0 +1,12 @@
+analiza la siguiente noticia: [link] como si fueses un periodista experto y experimentado. 
+Luego reescribi la noticia para que sea mas compacta y llamativa, pero sin exagerar, segui el siguiente formato para escribirla:
+Titular: Es la frase principal que capta la atención del lector. Debe ser breve, impactante y reflejar el contenido central de la noticia.
+Subtítulo o Bajada: Una frase o párrafo breve que amplía el titular y ofrece un resumen de la noticia. Ayuda al lector a entender el contexto general.
+Entrada o Lead: Es el primer párrafo de la noticia y responde a las preguntas clave: ¿qué ocurrió?, ¿quiénes están involucrados?, ¿cuándo?, ¿dónde?, ¿por qué? y, a veces, ¿cómo? Este párrafo debe ser impactante y directo.
+Cuerpo: Aquí se desarrolla la información en detalle. Se organiza de forma decreciente en importancia (estructura de pirámide invertida), priorizando los datos más relevantes al inicio. Incluye:
+Declaraciones de las partes involucradas.
+Datos y antecedentes que contextualicen el hecho.
+Opiniones o análisis de expertos, si corresponde.
+Cierre: Una frase final que resume la noticia o aporta una reflexión, dato adicional o declaración significativa. Puede ser un llamado a la acción o una conclusión.
+
+entrgamelo en un word

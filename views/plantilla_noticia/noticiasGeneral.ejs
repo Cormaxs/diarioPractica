@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/renderNoticia.css">
+<article class="noticia">
+    <!-- Titular -->
+    <h1 class="titular"><%= recuperarDatos.titular %></h1>
+
+    <!-- Subtítulo o Bajada -->
+    <p class="subtitulo"><%= recuperarDatos.subtitulo %></p>
+
+    <!-- Entrada o Lead -->
+    <p class="entrada"><%= recuperarDatos.entrada %></p>
+
+    <!-- Imagen Principal -->
+    <% if (recuperarDatos.imagen) { %>
+        <figure class="imagen-principal">
+            <img src="<%= recuperarDatos.imagen %>" alt="Imagen relacionada con la noticia" loading="lazy">
+            <figcaption><%= recuperarDatos.categoria %></figcaption> <!-- Pie de foto con la categoría -->
+        </figure>
+    <% } %>
+
+    <!-- Cuerpo de la noticia -->
+    <section class="cuerpo">
+        <p><%= recuperarDatos.cuerpo %></p>
+    </section>
+
+    <!-- Cierre -->
+    <footer class="cierre">
+        <p><%= recuperarDatos.cierre %></p>
+    </footer>
+
+    <!-- Información adicional -->
+    <div class="info-adicional">
+        <p><strong>Autor:</strong> <%= recuperarDatos.autor %></p>
+        <p><strong>Fecha de Publicación:</strong> <%= new Date(recuperarDatos.fechaPublicacion).toLocaleDateString() %></p>
+        <p><strong>Categoría:</strong> <%= recuperarDatos.categoria %></p>
+    </div>
+</article>
+
+

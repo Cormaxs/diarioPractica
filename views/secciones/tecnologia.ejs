@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/secciones.css">
+<h1 id="titulo-tecnologia-noticias">Tecnología Noticias</h1>
+<div class="noticias-container-tecnologia">
+    <% if (noticias && noticias.length > 0) { %>
+        <% noticias.forEach(noticia => { %>
+            <div class="noticia-tecnologia">
+                <a href="/seccion/finanzas/<%= noticia._id %>" target="_blank" rel="noopener noreferrer">
+                    <img src="<%= noticia.imagen %>" alt="Descripción de la imagen" class="imagen-noticia-tecnologia">
+                    <h2 class="titular-noticia-tecnologia"><%= noticia.titular %></h2>
+                </a>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>No hay noticias disponibles en este momento.</p>
+    <% } %>
+</div>
