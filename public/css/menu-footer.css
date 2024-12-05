@@ -1,0 +1,196 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+/* Barra superior (top bar) */
+.liser-topbar {
+  background: #db7f67;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5%;
+  font-size: 12px;
+  font-weight: 600;
+}
+.liser-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.liser-topbar-left i {
+  color: #fff; 
+}
+
+.liser-topbar-right a {
+  color: white;
+  margin-left: 15px; 
+  font-size: 18px; 
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.liser-topbar-right a:hover {
+  color: #f4603c;
+}
+
+
+/* Header */
+.liser-logo {
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+.liser-header {
+    background: #fff;
+    color: #333;
+}
+/* Contenedor principal */
+.liser-container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 15px;
+}
+/* Logo */
+.liser-logo h1 {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+/* Estilos para el cartel de ultima noticia */
+.liser-news-banner {
+  width: auto;
+  background-color: #ffdad1;
+  color: #f4603c;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.liser-news-banner i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #f4603c;
+}
+/* Menu */
+.liser-menu {
+    background: #232323;
+    transition: all 0.3s ease-in-out;
+    border-top: 5px solid #f4603c;
+}
+
+.liser-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.liser-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.3s ease;
+}
+
+.liser-menu ul li a:hover {
+    color: white;
+    background: #f4603c;
+    transition: 0.3s ease;
+}
+.liser-menu .liser-logo-menu {
+display: none;
+}
+.liser-menu.sticky {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  transform: translateY(-10px);
+  z-index: 10;
+  border: 0;
+  border-bottom: 5px solid #f4603c;
+}
+.liser-menu.sticky a {
+  color: #333;
+}
+.liser-menu.sticky .liser-logo-menu {
+  display: flex;
+  background: #f4603c;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.liser-menu.sticky.show {
+  transform: translateY(0);
+}
+.liser-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  background: #000;
+}
+/* Submenú */
+.liser-submenu {
+    background: #fff;
+    padding: 6px 0px;
+}
+
+.liser-submenu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto; 
+}
+
+.liser-submenu-title {
+    color: #f4603c; 
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.liser-submenu ul li a {
+    text-decoration: none;
+    color: #232323; 
+    font-size: 14px;
+    white-space: nowrap; 
+    transition: color 0.3s ease;
+}
+
+.liser-submenu ul li a:hover {
+    color: #f4603c;
+}
+ 
+
+
+
+

@@ -1,3 +1,148 @@
+<link rel="stylesheet" href="/css/paginaPrincipal.css">
+
+<main>
+    <!-- Noticias generales -->
+    <section class="liser-featured-news">
+      <div class="liser-support-grid"></div>
+      <div class="liser-band">
+        <% politica.forEach((noticia) => { %>
+          <div class="liser-item">
+            <a href="#" class="liser-card">
+              <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+              <article>
+                <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
+                <p><%= noticia.subtitulo %></p>
+                <span class="liser-category">Política</span>
+                <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
+              </article>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+  
+    <!-- Sección Tecnología -->
+    <section class="liser-news-section">
+      <div class="liser-container2">
+        <div class="liser-main-content">
+          <div class="liser-section-header">
+            <h2><i class="fas fa-laptop-code"></i> Tecnología</h2>
+            <a href="#" class="liser-ver-mas-btn">Ver más</a>
+          </div>
+          <div class="liser-band liser-tecnologia-section">
+            <% tecnologia.forEach((noticia) => { %>
+              <div class="liser-item">
+                <a href="#" class="liser-card">
+                  <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+                  <article>
+                    <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
+                    <p><%= noticia.subtitulo %></p>
+                    <span class="liser-category">Tecnología</span>
+                    <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
+                  </article>
+                </a>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Actualidad -->
+    <section>
+      <div class="liser-section-header">
+        <h2><i class="fas fa-clock"></i> Actualidad</h2>
+      </div>
+      <div class="liser-band liser-ultimas-noticias-section">
+        <% actualidad.forEach((noticia) => { %>
+          <div class="liser-item">
+            <a href="#" class="liser-card">
+              <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+              <article>
+                <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
+                <p><%= noticia.entrada %></p>
+                <span class="liser-category"><%= noticia.categoria %></span>
+                <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
+              </article>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </section>
 
 
- 
+     <!-- Sección Finanzas -->
+     <section class="liser-news-section">
+        <div class="liser-container2">
+          <div class="liser-main-content">
+            <div class="liser-section-header">
+              <h2><i class="fas fa-laptop-code"></i> Finanzas</h2>
+              <a href="#" class="liser-ver-mas-btn">Ver más</a>
+            </div>
+            <div class="liser-band liser-tecnologia-section">
+              <% finanzas.forEach((noticia) => { %>
+                <div class="liser-item">
+                  <a href="#" class="liser-card">
+                    <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+                    <article>
+                      <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
+                      <p><%= noticia.subtitulo %></p>
+                      <span class="liser-category">Tecnología</span>
+                      <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
+                    </article>
+                  </a>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+       <!-- Sección Tecnología -->
+    <section class="liser-news-section">
+        <div class="liser-container2">
+          <div class="liser-main-content">
+            <div class="liser-section-header">
+              <h2><i class="fas fa-laptop-code"></i> politica</h2>
+              <a href="#" class="liser-ver-mas-btn">Ver más</a>
+            </div>
+            <div class="liser-band liser-tecnologia-section">
+              <% politica.forEach((noticia) => { %>
+                <div class="liser-item">
+                  <a href="#" class="liser-card">
+                    <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+                    <article>
+                      <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
+                      <p><%= noticia.subtitulo %></p>
+                      <span class="liser-category">Tecnología</span>
+                      <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
+                    </article>
+                  </a>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+  
+    <!-- Publicidad y Categorías -->
+    <aside class="liser-sidebar">
+      <div class="liser-ad-space">
+        <img src="https://via.placeholder.com/300x250" alt="Publicidad">
+      </div>
+      <div class="liser-categories-menu">
+        <h3>Categorías</h3>
+        <ul>
+          <li><a href="#">Política</a></li>
+          <li><a href="#">Tecnología</a></li>
+          <li><a href="#">Actualidad</a></li>
+          <li><a href="#">Finanzas</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+  

@@ -2,7 +2,11 @@ import {todasLasNoticias, buscarNoticia} from '../repositories/repository.js'
 
 //muestra todas las secciones
 export async function todasLasSecciones(req, res) {
-    res.render('layout', {title: 'seciones', content: 'secciones/todasLasSecciones'})
+    const politica = await todasLasNoticias('politica');
+    const finanzas = await todasLasNoticias('finanzas');
+    const actualidad = await todasLasNoticias('actualidad');
+    const tecnologia = await todasLasNoticias('tecnologia');
+    res.render('layout', {title: 'seciones', content: 'secciones/todasLasSecciones', politica, finanzas,  actualidad, tecnologia})
 }
 //muestra s seccion con todos las noticias pertenecientes a esa seccion
 export async function politica(req, res) {

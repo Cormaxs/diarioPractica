@@ -1,0 +1,296 @@
+/* Hola Tomas, mira... una teta :D
+⠄⠄⠄⠄⠄⢀⡤⢎⢗⣾⠫⡫⢖⢄
+⠄⠄⠄⠄⢀⡎⠒⠐⠾⠛⠙⣆⡢⠑⢣
+⠄⠄⠄⢠⢾⡦⢒⡁⣰⣿⣿⣦⡐⣳⣩⢇
+⠄⠄⠄⡾⣢⢭⠔⣴⠒⢺⣿⣯⠥⠑⠑⡾⡄
+⠄⠄⠄⣷⡡⠁⠣⣿⣿⣿⣿⢿⣶⣠⢪⠒⡟
+⠄⠄⢠⡼⠾⡀⡄⣿⣿⢿⡏⢾⡇⣘⡽⠱⢧⡀
+⠄⠄⠄⠉⠉⠱⢦⣘⢿⣾⣶⢟⣠⡀⡄⢔⠏⠁
+⠄⠄⠄⠄⠄⣠⢼⣿⣷⣶⣾⡷⢸⣗⣯⣿⣶⣿⣶⡄
+⠄⣀⣤⣴⣾⣿⣷⣭⣭⣭⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀
+⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣸⣿⣿⣧
+⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⢻⣿⣿⡄
+⢸⣿⣮⣿⣿⣿⣿⣿⣿⣿⡟⢹⣿⣿⣿⡟⢛⢻⣷⢻⣿⣧
+⠄⣿⡏⣿⡟⡛⢻⣿⣿⣿⣿⠸⣿⣿⣿⣷⣬⣼⣿⢸⣿⣿
+⠄⣿⣧⢿⣧⣥⣾⣿⣿⣿⡟⣴⣝⠿⣿⣿⣿⠿⣫⣾⣿⣿⡆
+...⢸⣿⣮⡻⠿⣿⠿⣟⣫⣾⣿⣿⣿⣷⣶⣾⣿⡏⣿⣿⣿⡇
+⠄⢸⣿⣿⣿⡇⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣿⣿⣿
+*/
+
+
+
+/* Noticias */
+.liser-featured-news {/*dentro de main contiene lo demas*/
+    margin-top: 20px;
+}
+.liser-band {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    .liser-band {
+      grid-template-columns: 1fr 1fr;
+    }  
+    .liser-item-1 {
+      grid-column: 1 / span 2;
+    }
+    .liser-item-1 h1 {
+      font-size: 30px;
+    }
+  }
+  
+  @media only screen and (min-width: 850px) {
+    .liser-band {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  
+  .liser-card {
+    min-height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #444;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+ 
+  }
+  
+  .liser-card:hover {
+    top: -2px;
+    transition: 0.1s ease;
+    opacity: 0.8;
+  }
+  
+  .liser-card article {
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  .liser-thumb { /*noticia destacada*/
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .liser-card p { 
+    flex: 1;
+    line-height: 1.4;
+  }
+  
+  /* Categoría */
+  .liser-category {
+    display: inline-block;
+    background-color: #f4603c;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.6em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: absolute;
+    margin-top: -45px;
+  }
+  
+  /* Icono en el título */
+  .liser-card h1 {
+    font-size: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .liser-card h1 i {
+    margin-right: 10px;
+    color: #f4603c;
+  }
+  
+  /* Encabezado*/
+  .liser-section-header {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        background-color: #fff;
+        padding: 5px 20px;
+        border-bottom: 5px solid #f4603c;
+}
+  
+  .liser-section-header h2 {
+    font-size: 1.3em;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  .liser-section-header h2 i {
+    margin-right: 10px;
+    color: #f4603c;
+  }
+  
+  .liser-ver-mas-btn {
+    background-color: #f4603c;
+    color: white;
+    text-decoration: none;
+    padding: 4px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .liser-ver-mas-btn:hover {
+    background-color: #d94c2e;
+    transform: scale(1.05);
+  }
+  .liser-tecnologia-section .liser-band {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .liser-item {
+    grid-column: span 1;
+  }
+  .liser-date {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  .liser-date i {
+    margin-right: 5px;
+    color: #f4603c; 
+  }  
+/* News Section */
+.liser-news-section {
+    margin-top: 20px;
+}
+.liser-container2 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 0px;
+}
+.liser-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Lado derecho: Sidebar */
+  .liser-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+  }
+  
+  /* categorías */
+  .liser-categories-menu {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .liser-categories-menu h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 5px solid #f4603c;
+  }
+  
+  .liser-categories-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .liser-categories-menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .liser-categories-menu ul li a {
+    text-decoration: none;
+    color: #428bff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .liser-categories-menu ul li a:hover {
+    color: #f4603c;
+  }
+  
+  /* Publicidad */
+  .liser-ad-space img {
+    width: 100%;
+    height: auto;
+  }
+
+/* Footer */
+.liser-footer {
+  margin-top: 20px;
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .liser-news-banner {
+    font-size: 14px; 
+    padding: 10px 15px; 
+}
+
+.liser-news-banner i {
+    font-size: 20px; 
+}
+  .liser-container2 {
+    grid-template-columns: 1fr;
+}
+  .liser-sidebar{
+    display: none;
+  }
+    .liser-menu ul {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .liser-menu ul.active {
+        display: flex;
+    }
+
+    .liser-menu ul li {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .liser-menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .liser-menu-toggle i {
+        font-size: 24px;
+    }
+}
