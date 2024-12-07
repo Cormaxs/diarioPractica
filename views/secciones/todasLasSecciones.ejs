@@ -1,148 +1,216 @@
 <link rel="stylesheet" href="/css/paginaPrincipal.css">
 
-<main>
-    <!-- Noticias generales -->
-    <section class="liser-featured-news">
-      <div class="liser-support-grid"></div>
-      <div class="liser-band">
-        <% politica.forEach((noticia) => { %>
+
+<!-- Noticias -->
+<section class="liser-featured-news">
+  <div class="liser-support-grid"></div>
+  <div class="liser-band">
+    <div class="liser-item-1">
+      <a href="#" class="liser-card">
+        <div class="liser-thumb" style="background-image: url(https://i.imgur.com/M8vYsC3.png);"></div>
+        <article>
+          <h1><i class="fas fa-newspaper"></i> Titulo de la noticia</h1>
+          <span class="liser-category">Categoria</span>
+        </article>
+      </a>
+    </div>
+    <% actualidad.forEach((noticia)=> { %>
+      <div class="liser-item">
+        <a href="/seccion/actualidad/<%= noticia.id %>" class="liser-card">
+          <div class="liser-thumb"
+            style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+          <article>
+            <h1><i class="fas fa-newspaper"></i>
+              <%= (noticia.titular || 'Sin titulo disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+            </h1>
+            <p>
+              <%= (noticia.subtitulo || 'Sin descripción disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+            </p>
+            <span class="liser-category">
+              <%= noticia.categoria || 'Sin categoría' %>
+            </span>
+            <span class="liser-date">
+              <i class="fas fa-calendar-alt"></i>
+              <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+            </span>
+          </article>
+        </a>
+      </div>
+      <% }) %>
+
+  </div>
+</section>
+
+
+
+<section class="liser-news-section">
+  <!-- Nueva sección: Tecnología -->
+  <div class="liser-container2">
+    <!-- Lado izquierdo: Secciones -->
+    <div class="liser-main-content">
+      <!-- Sección Tecnología -->
+      <div class="liser-section-header">
+        <h2><i class="fas fa-laptop-code"></i> Tecnología</h2>
+        <a href="/seccion/tecnologia/" class="liser-ver-mas-btn">Ver más</a>
+      </div>
+      <div class="liser-band liser-tecnologia-section">
+        <!------------------------------------------------------------------------------------- Noticias de Tecnología ------------------------------------------------------------------------------------------------------------------>
+        <% tecnologia.forEach((noticia)=> { %>
           <div class="liser-item">
-            <a href="#" class="liser-card">
-              <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+            <a href="/seccion/tecnologia/<%= noticia.id %>" class="liser-card">
+              <div class="liser-thumb"
+                style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
               <article>
-                <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
-                <p><%= noticia.subtitulo %></p>
-                <span class="liser-category">Política</span>
-                <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
+                <h1><i class="fas fa-newspaper"></i>
+                  <%= (noticia.titular || 'Sin titulo disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </h1>
+                <p>
+                  <%= (noticia.subtitulo || 'Sin descripción disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </p>
+                <span class="liser-category">
+                  <%= noticia.categoria || 'Sin categoría' %>
+                </span>
+                <span class="liser-date">
+                  <i class="fas fa-calendar-alt"></i>
+                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                </span>
               </article>
             </a>
           </div>
-        <% }) %>
+          <% }) %>
       </div>
-    </section>
-  
-    <!-- Sección Tecnología -->
-    <section class="liser-news-section">
-      <div class="liser-container2">
-        <div class="liser-main-content">
-          <div class="liser-section-header">
-            <h2><i class="fas fa-laptop-code"></i> Tecnología</h2>
-            <a href="#" class="liser-ver-mas-btn">Ver más</a>
-          </div>
-          <div class="liser-band liser-tecnologia-section">
-            <% tecnologia.forEach((noticia) => { %>
-              <div class="liser-item">
-                <a href="#" class="liser-card">
-                  <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
-                  <article>
-                    <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
-                    <p><%= noticia.subtitulo %></p>
-                    <span class="liser-category">Tecnología</span>
-                    <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
-                  </article>
-                </a>
-              </div>
-            <% }) %>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <!-- Actualidad -->
-    <section>
+
+
+
+      <!-- Sección Últimas Noticias -->
       <div class="liser-section-header">
-        <h2><i class="fas fa-clock"></i> Actualidad</h2>
+        <h2><i class="fas fa-clock"></i> Últimas Noticias</h2>
       </div>
       <div class="liser-band liser-ultimas-noticias-section">
-        <% actualidad.forEach((noticia) => { %>
+        <!-- Noticias de Últimas Noticias -->
+        <% actualidad.forEach((noticia)=> { %>
           <div class="liser-item">
-            <a href="#" class="liser-card">
-              <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+            <a href="/seccion/actualidad/<%= noticia.id %>" class="liser-card">
+              <div class="liser-thumb"
+                style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
               <article>
-                <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
-                <p><%= noticia.entrada %></p>
-                <span class="liser-category"><%= noticia.categoria %></span>
-                <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
+                <h1><i class="fas fa-newspaper"></i>
+                  <%= (noticia.titular || 'Sin titulo disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </h1>
+                <p>
+                  <%= (noticia.subtitulo || 'Sin descripción disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </p>
+                <span class="liser-category">
+                  <%= noticia.categoria || 'Sin categoría' %>
+                </span>
+                <span class="liser-date">
+                  <i class="fas fa-calendar-alt"></i>
+                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                </span>
               </article>
             </a>
           </div>
-        <% }) %>
+          <% }) %>
       </div>
-    </section>
 
-
-     <!-- Sección Finanzas -->
-     <section class="liser-news-section">
-        <div class="liser-container2">
-          <div class="liser-main-content">
-            <div class="liser-section-header">
-              <h2><i class="fas fa-laptop-code"></i> Finanzas</h2>
-              <a href="#" class="liser-ver-mas-btn">Ver más</a>
-            </div>
-            <div class="liser-band liser-tecnologia-section">
-              <% finanzas.forEach((noticia) => { %>
-                <div class="liser-item">
-                  <a href="#" class="liser-card">
-                    <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
-                    <article>
-                      <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
-                      <p><%= noticia.subtitulo %></p>
-                      <span class="liser-category">Tecnología</span>
-                      <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
-                    </article>
-                  </a>
-                </div>
-              <% }) %>
-            </div>
+      <!-- Más ítems aquí... -->
+      <div class="liser-section-header">
+        <h2><i class="fas fa-coins"></i> Finanzas</h2>
+        <a href="/seccion/finanzas/" class="liser-ver-mas-btn">Ver más</a>
+      </div>
+      <div class="liser-band liser-tecnologia-section">
+        <!------------------------------------------------------------------------------------- Noticias de Tecnología ------------------------------------------------------------------------------------------------------------------>
+        <% finanzas.forEach((noticia)=> { %>
+          <div class="liser-item">
+            <a href="/seccion/finanzas/<%= noticia.id %>" class="liser-card">
+              <div class="liser-thumb"
+                style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+              <article>
+                <h1><i class="fas fa-newspaper"></i>
+                  <%= (noticia.titular || 'Sin titulo disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </h1>
+                <p>
+                  <%= (noticia.subtitulo || 'Sin descripción disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </p>
+                <span class="liser-category">
+                  <%= noticia.categoria || 'Sin categoría' %>
+                </span>
+                <span class="liser-date">
+                  <i class="fas fa-calendar-alt"></i>
+                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                </span>
+              </article>
+            </a>
           </div>
-        </div>
-      </section>
+          <% }) %>
+      </div>
 
 
-       <!-- Sección Tecnología -->
-    <section class="liser-news-section">
-        <div class="liser-container2">
-          <div class="liser-main-content">
-            <div class="liser-section-header">
-              <h2><i class="fas fa-laptop-code"></i> politica</h2>
-              <a href="#" class="liser-ver-mas-btn">Ver más</a>
-            </div>
-            <div class="liser-band liser-tecnologia-section">
-              <% politica.forEach((noticia) => { %>
-                <div class="liser-item">
-                  <a href="#" class="liser-card">
-                    <div class="liser-thumb" style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
-                    <article>
-                      <h1><i class="fas fa-newspaper"></i> <%= noticia.titular %></h1>
-                      <p><%= noticia.subtitulo %></p>
-                      <span class="liser-category">Tecnología</span>
-                      <span class="liser-date"><i class="fas fa-calendar-alt"></i> <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %></span>
-                    </article>
-                  </a>
-                </div>
-              <% }) %>
-            </div>
+
+      <div class="liser-section-header">
+        <h2><i class="fas fa-newspaper "></i> Politica</h2>
+        <a href="/seccion/politica/" class="liser-ver-mas-btn">Ver más</a>
+      </div>
+      <div class="liser-band liser-tecnologia-section">
+        <!------------------------------------------------------------------------------------- Noticias de Tecnología ------------------------------------------------------------------------------------------------------------------>
+        <% politica.forEach((noticia)=> { %>
+          <div class="liser-item">
+            <a href="/seccion/politica/<%= noticia.id %>" class="liser-card">
+              <div class="liser-thumb"
+                style="background-image: url(<%= noticia.imagen || 'https://via.placeholder.com/150' %>);"></div>
+              <article>
+                <h1><i class="fas fa-newspaper"></i>
+                  <%= (noticia.titular || 'Sin titulo disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </h1>
+                <p>
+                  <%= (noticia.subtitulo || 'Sin descripción disponible.').split(' ').slice(0, 10).join(' ') + (noticia.subtitulo && noticia.subtitulo.split(' ').length > 10 ? '...' : '') %>
+                </p>
+                <span class="liser-category">
+                  <%= noticia.categoria || 'Sin categoría' %>
+                </span>
+                <span class="liser-date">
+                  <i class="fas fa-calendar-alt"></i>
+                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                </span>
+              </article>
+            </a>
           </div>
-        </div>
-      </section>
+          <% }) %>
+      </div>
 
+    </div>
 
-      
-  
-    <!-- Publicidad y Categorías -->
-    <aside class="liser-sidebar">
+    <!-- Lado derecho -->
+    <div class="liser-sidebar">
       <div class="liser-ad-space">
-        <img src="https://via.placeholder.com/300x250" alt="Publicidad">
+        <img src="https://i.imgur.com/M8vYsC3.png" alt="Publicidad">
       </div>
+      <!-- Menú de Categorías -->
       <div class="liser-categories-menu">
         <h3>Categorías</h3>
         <ul>
-          <li><a href="#">Política</a></li>
-          <li><a href="#">Tecnología</a></li>
-          <li><a href="#">Actualidad</a></li>
-          <li><a href="#">Finanzas</a></li>
+          <li><a href="/seccion/tecnologia/">Tecnología</a></li>
+          <li><a href="/seccion/actualidad/">Actualidad</a></li>
+          <li><a href="/seccion/politica">Política</a></li>
+          <li><a href="/seccion/finanzas/">Finanzas</a></li>
         </ul>
       </div>
-    </aside>
-  </main>
-  
+
+      <!-- Publicidad -->
+      <div class="liser-ad-space">
+        <img src="https://i.imgur.com/M8vYsC3.png" alt="Publicidad">
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+<section class="liser-featured-news">
+  <div class="liser-support-grid"></div> <!-- Puedes usar este div para contenido adicional si lo necesitas -->
+  <div class="liser-band">
+
+  </div>
+</section>
