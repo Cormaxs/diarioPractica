@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/webp-logo.webp" type="image/webp">
+    <meta name="keywords" content="infonoa, infonoa24, infonoa.com, infonoa24.com, imfonoa, imfonoa24.com, inforama, diarios catamarca, noticias digitales, san fernando del valle de catamarca, noticias, deportes, tecnología, política, economía, cultura">
     <title><%= title || 'Infonoa24.com' %></title>
     <!-- CSS externo -->
     <link rel="stylesheet" href="/css/menu-footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Infonoa: Tu diario digital con las últimas noticias de actualidad, política, economía, deportes y cultura del norte argentino. Información confiable, rápida y accesible.">
 </head>
 <body>
     <!-- Navbar -->
@@ -19,7 +22,7 @@
             <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61570436540181" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i> 
             </a>
             <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
@@ -37,8 +40,8 @@
     <nav class="liser-menu">
         <div class="liser-container">
         <ul>
-            <li><a href="#" class="liser-logo-menu">logo</a></li>
-            <li><a href="/seccion/secciones"><i class="fas fa-home"></i></a></li>
+            <li><a href="/" class="liser-logo-menu"><img src="/images/cerca.webp" alt=""></a></li>
+            <li><a href="/"><i class="fas fa-home"></i></a></li>
             <li><a href="/seccion/finanzas/">Finanzas</a></li>
             <li><a href="/seccion/politica/">Política</a></li>
             <li><a href="/seccion/actualidad/">Actualidad</a></li>
@@ -60,7 +63,7 @@
 <div class="liser-container">
     <div class="liser-news-banner">
        <i class="fa-solid fa-bell"></i>
-     <!--<p>Última noticia: ¡BTC supera los 100k de USD!</p>-->
+     <a href="/seccion/<%=ultNoticia.categoria%>/<%=ultNoticia.id%>"> <p><%= ultNoticia.titular %></p></a><!---->
   </div>
 
     <!-- Contenido dinámico -->
@@ -70,18 +73,10 @@
         </div>
     </main>
 
-    <!-- Footer 
-    <footer id="footer-diary">
-        <div class="footer-container-diary">
-            <ul class="footer-menu-diary">
-                <li><a href="/seccion/finanzas" class="footer-item-diary">Finanzas</a></li>
-                <li><a href="/seccion/politica" class="footer-item-diary">Política</a></li>
-                <li><a href="/seccion/actualidad" class="footer-item-diary">Actualidad</a></li>
-                <li><a href="/seccion/tecnologia" class="footer-item-diary">Tecnología</a></li>
-            </ul>
-            <p class="footer-text-diary">&copy; 2024 Infonoa24.com - Todos los derechos reservados</p>
-        </div>
-    </footer>-->
+    <!-- Footer--> 
+    <footer class="liser-footer">
+        <p>&copy; 2024 Infonoa24.com. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="/js/script.js"></script>
 </body>

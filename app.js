@@ -16,9 +16,7 @@ app.set('layout', 'layout');//archivo base para los layout es layout
 app.use(express.static(path.resolve('./public')));//busca todo lo estatico en public, como los css
 app.use(express.urlencoded({ extended: true }));  // Para formularios con método POST
 
-app.get('/', (req, res)=>{
-    res.send('funciona');
-})
+app.get('/', routerIndex)
 app.use('/api', router);//rutas api
 app.use('/seccion', routerIndex);//rutas secciones
 

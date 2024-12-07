@@ -24,3 +24,7 @@ export async function buscarNoticia(id) {
     return  await noticia.findById(id);    
     
 }
+
+export async function traerUltimaNoticia() {
+  return await noticia.findOne().sort({ fechaPublicacion: -1 }).catch(console.error); 
+}

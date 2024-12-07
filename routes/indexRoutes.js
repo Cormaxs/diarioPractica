@@ -3,7 +3,7 @@ import { finanzas,politica,actualidad,tecnologia, crearNoticia, todasLasSeccione
 
 
 const routerIndex = express.Router();
-
+routerIndex.get('/', todasLasSecciones);//muestra todas las secciones
 routerIndex.get('/secciones', todasLasSecciones);//muestra todas las secciones
 
 routerIndex.get('/finanzas', finanzas);//muestra el inicio de finanzas

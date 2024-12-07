@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/paginaPrincipal.css">
-
+<link rel="canonical" href="/">
 
 <!-- Noticias -->
 <section class="liser-featured-news">
@@ -7,7 +7,7 @@
   <div class="liser-band">
     <div class="liser-item-1">
       <a href="#" class="liser-card">
-        <div class="liser-thumb" style="background-image: url(https://i.imgur.com/M8vYsC3.png);"></div>
+        <div class="liser-thumb" style="background-image: url(/images/webp-logo.webp);"></div>
         <article>
           <h1><i class="fas fa-newspaper"></i> Titulo de la noticia</h1>
           <span class="liser-category">Categoria</span>
@@ -31,7 +31,7 @@
             </span>
             <span class="liser-date">
               <i class="fas fa-calendar-alt"></i>
-              <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+              <%=new Date(noticia.fechaPublicacion).toLocaleString('es-AR'); %>
             </span>
           </article>
         </a>
@@ -72,7 +72,7 @@
                 </span>
                 <span class="liser-date">
                   <i class="fas fa-calendar-alt"></i>
-                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                  <%=new Date(noticia.fechaPublicacion).toLocaleString('es-AR'); %>
                 </span>
               </article>
             </a>
@@ -105,7 +105,7 @@
                 </span>
                 <span class="liser-date">
                   <i class="fas fa-calendar-alt"></i>
-                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                  <%=new Date(noticia.fechaPublicacion).toLocaleString('es-AR'); %>
                 </span>
               </article>
             </a>
@@ -137,7 +137,7 @@
                 </span>
                 <span class="liser-date">
                   <i class="fas fa-calendar-alt"></i>
-                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                  <%=new Date(noticia.fechaPublicacion).toLocaleString('es-AR'); %>
                 </span>
               </article>
             </a>
@@ -170,7 +170,7 @@
                 </span>
                 <span class="liser-date">
                   <i class="fas fa-calendar-alt"></i>
-                  <%= new Date(noticia.fechaPublicacion).toLocaleDateString() %>
+                  <%=new Date(noticia.fechaPublicacion).toLocaleString('es-AR'); %>
                 </span>
               </article>
             </a>
@@ -183,7 +183,7 @@
     <!-- Lado derecho -->
     <div class="liser-sidebar">
       <div class="liser-ad-space">
-        <img src="https://i.imgur.com/M8vYsC3.png" alt="Publicidad">
+        <img src="/images/webp-logo.webp" alt="Publicidad">
       </div>
       <!-- Menú de Categorías -->
       <div class="liser-categories-menu">
@@ -198,7 +198,7 @@
 
       <!-- Publicidad -->
       <div class="liser-ad-space">
-        <img src="https://i.imgur.com/M8vYsC3.png" alt="Publicidad">
+        <img src="/images/webp-logo.webp" alt="Publicidad">
       </div>
     </div>
   </div>

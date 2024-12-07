@@ -1,4 +1,4 @@
-import {datosRecibidos} from '../repositories/repository.js';
+import {datosRecibidos, traerUltimaNoticia} from '../repositories/repository.js';
 
 
 export async function recibirFormulario(req, res) {
@@ -11,5 +11,6 @@ export async function recibirFormulario(req, res) {
 
 //agregar noticia formulario mostar
 export async function mostrarFormulario(req, res) {
-   res.render('layout', {title: 'crear noticia', content: 'formularios/noticia'});
+    const ultNoticia = await traerUltimaNoticia();
+   res.render('layout', {title: 'crear noticia', content: 'formularios/noticia', ultNoticia});
 }

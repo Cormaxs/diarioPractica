@@ -292,5 +292,7 @@ margin-top: 20px;
 
   .liser-menu-toggle i {
       font-size: 24px;
+      display: flex;
+      margin-left: 15px;
   }
 }

@@ -30,7 +30,7 @@
     <!-- Información adicional -->
     <div class="info-adicional">
         <p><strong>Autor:</strong> <%= recuperarDatos.autor %></p>
-        <p><strong>Fecha de Publicación:</strong> <%= new Date(recuperarDatos.fechaPublicacion).toLocaleDateString() %></p>
+        <p><strong>Fecha de Publicación:</strong> <%=new Date(recuperarDatos.fechaPublicacion).toLocaleString('es-AR'); %></p>
         <p><strong>Categoría:</strong> <%= recuperarDatos.categoria %></p>
     </div>
 </article>
