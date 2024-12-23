@@ -7,4 +7,6 @@ router.get('/crearnoticia', mostrarFormulario);
 router.post('/recibirNoticia',recibirFormulario );
 
 
+
+
 export default router;
