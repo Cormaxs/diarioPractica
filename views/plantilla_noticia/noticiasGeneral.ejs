@@ -1,5 +1,7 @@
-<link rel="stylesheet" href="/css/renderNoticia.css">
+<link rel="stylesheet" href="/css/noticiasGeneral.css">
 <article class="noticia">
+
+    <figcaption class="categoria"><%= recuperarDatos.categoria %></figcaption> <!-- Pie de foto con la categoría -->
     <!-- Titular -->
     <h1 class="titular"><%= recuperarDatos.titular %></h1>
 
@@ -9,11 +11,15 @@
     <!-- Entrada o Lead -->
     <p class="entrada"><%= recuperarDatos.entrada %></p>
 
+    <div class="info-adicional">
+        <p><strong>Redactado por :</strong> <%= recuperarDatos.autor %></p>
+        <p><strong>Publicado :</strong> <%=new Date(recuperarDatos.fechaPublicacion).toLocaleString('es-AR'); %></p>
+       <!-- <p><strong>Categoría:</strong> <%= recuperarDatos.categoria %></p>-->
+    </div>
     <!-- Imagen Principal -->
     <% if (recuperarDatos.imagen) { %>
         <figure class="imagen-principal">
             <img src="<%= recuperarDatos.imagen %>" alt="Imagen relacionada con la noticia" loading="lazy">
-            <figcaption><%= recuperarDatos.categoria %></figcaption> <!-- Pie de foto con la categoría -->
         </figure>
     <% } %>
 
@@ -23,16 +29,10 @@
     </section>
 
     <!-- Cierre -->
-    <footer class="cierre">
-        <p><%= recuperarDatos.cierre %></p>
-    </footer>
+   
 
     <!-- Información adicional -->
-    <div class="info-adicional">
-        <p><strong>Autor:</strong> <%= recuperarDatos.autor %></p>
-        <p><strong>Fecha de Publicación:</strong> <%=new Date(recuperarDatos.fechaPublicacion).toLocaleString('es-AR'); %></p>
-       <!-- <p><strong>Categoría:</strong> <%= recuperarDatos.categoria %></p>-->
-    </div>
+    
 </article>
 
 

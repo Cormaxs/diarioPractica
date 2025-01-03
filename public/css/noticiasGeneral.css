@@ -1,0 +1,84 @@
+.categoria{
+    color: #db7f67;
+    margin-bottom: 1rem;
+    
+}
+
+/* Estilo para el artículo específico */
+   article.noticia {
+    width: clamp(auto, 1200px, 1600px);
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Estilo para el titular */
+article.noticia .titular {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+}
+
+/* Estilo para el subtítulo o bajada */
+article.noticia .subtitulo {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+/* Estilo para la entrada o lead */
+article.noticia .entrada {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Estilo para la imagen principal */
+article.noticia .imagen-principal {
+    text-align: center;
+    width: auto;
+
+}
+
+article.noticia .imagen-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+article.noticia .imagen-principal figcaption {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Estilo para el cuerpo de la noticia */
+article.noticia .cuerpo {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para el cierre */
+article.noticia .cierre {
+    font-size: 1rem;
+    color: #202020;
+    margin-top: 1.5rem;
+}
+
+/* Estilo para la información adicional */
+
+
+article.noticia .info-adicional  {
+    width: auto;
+    margin: auto;
+}
+article.noticia .info-adicional > strong{
+    color: #db7f67;
+    font-weight: bold;
+}
