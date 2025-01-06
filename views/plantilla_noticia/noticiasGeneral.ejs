@@ -11,17 +11,19 @@
     <!-- Entrada o Lead -->
     <p class="entrada"><%= recuperarDatos.entrada %></p>
 
-    <div class="info-adicional">
-        <p><strong>Redactado por :</strong> <%= recuperarDatos.autor %></p>
-        <p><strong>Publicado :</strong> <%=new Date(recuperarDatos.fechaPublicacion).toLocaleString('es-AR'); %></p>
-       <!-- <p><strong>Categoría:</strong> <%= recuperarDatos.categoria %></p>-->
-    </div>
+    
     <!-- Imagen Principal -->
     <% if (recuperarDatos.imagen) { %>
         <figure class="imagen-principal">
+            <div class="info-adicional">
+                <p><strong>Escrito por :</strong> <%= recuperarDatos.autor %> <%=new Date(recuperarDatos.fechaPublicacion).toLocaleString('es-AR'); %> </p>
+               <!-- <p><strong>Categoría:</strong> <%= recuperarDatos.categoria %></p>-->
+            </div>
             <img src="<%= recuperarDatos.imagen %>" alt="Imagen relacionada con la noticia" loading="lazy">
+            
         </figure>
     <% } %>
+   
 
     <!-- Cuerpo de la noticia -->
     <section class="cuerpo">
