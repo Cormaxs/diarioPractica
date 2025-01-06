@@ -45,4 +45,4 @@ const noticiaSchema = new mongoose.Schema({
     } // Imagen: Ruta o URL a la imagen asociada
 });
 
-export default mongoose.model("Noticia", noticiaSchema, 'NoticiasInfoNoa'); //Noticias es la colleccion que quiero que se guarden los datos
+export default mongoose.model("Noticia", noticiaSchema, 'Noticiasinfonoa24'); //Noticias es la colleccion que quiero que se guarden los datos

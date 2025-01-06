@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 export async function connectDB() {
     try {
         await mongoose.connect(
-            'mongodb://adminInfonoa:infonoa24@45.236.128.209:27017/Noticias?authSource=admin',
+            'mongodb://adminInfonoa:infonoa24@45.236.128.209:27017/infonoa24?authSource=admin',
             { useNewUrlParser: true, useUnifiedTopology: true }
         );
 
