@@ -1,0 +1,45 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar-container {
+      flex-direction: column;
+    }
+  
+    .menu-diary {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-item-diary {
+      margin-bottom: 1rem;
+    }
+  
+    /* Content */
+    .content-container-diary {
+      padding: 1rem;
+    }
+  
+    /* News */
+    .noticia-diary {
+      margin-bottom: 1rem;
+    }
+  
+    .noticia-diary img {
+      height: auto; /* Adjust image height to fit the screen */
+    }
+  
+    /* Footer */
+    .footer-container-diary {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-menu-diary {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-item-diary {
+      margin-bottom: 1rem;
+    }
+  }

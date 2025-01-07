@@ -251,3 +251,20 @@ margin-top: 20px;
   color: white;
   padding: 10px 0;
 }
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  
+  .liser-container2{
+    grid-template-columns: 3fr;
+
+  }
+  /*.liser-sidebar{
+    display: none;
+  }*/
+}
+
+
